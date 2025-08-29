@@ -1,0 +1,31 @@
+name: Simple Password Generator
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checking repository
+        uses: actions/checkout@v3
+
+      - name: Setting up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Installing dependencies
+        run: npm ci
+
+      - name: Building project
+        run: npm run build
+
+      - name: Deploying to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
