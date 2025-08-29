@@ -1,6 +1,7 @@
 <script setup>
-  import PasswordGenerator from './components/PasswordGenerator.vue'
-  import DisplayCard from './components/DisplayCard.vue'
+  import PasswordGenerator from './components/PasswordGenerator.vue';
+  import DisplayCard from './components/DisplayCard.vue';
+  import Toast from './components/Toast.vue';
 </script>
 
 <template>
@@ -9,7 +10,7 @@
   </header>
 
   <main class="w-full container mx-auto my-8">
-    <DisplayCard class="max-w-2xl mx-auto">
+    <DisplayCard class="max-w-2xl mx-auto text-gray-800">
       <template #header>
         <h1 class="text-center text-3xl font-bold">
           Passowrd Generator
@@ -20,6 +21,7 @@
     </DisplayCard>
   </main>
 
+  <Toast/>
   <footer>
 
   </footer>

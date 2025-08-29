@@ -2,6 +2,7 @@
   import RegularButton from './buttons/RegularButton.vue';
   import InputField from './form/InputField.vue';
   import CheckboxField from './form/CheckboxField.vue';
+  import emitter from '../eventBus';
 </script>
 
 <template>
@@ -185,6 +186,7 @@ export default {
     },
     async copyPassword() {
       await navigator.clipboard.writeText(this.password);
+      emitter.emit("toast", "Password copied to clipboard!");
     }
   },
   mounted() {
