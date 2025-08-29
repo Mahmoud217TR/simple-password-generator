@@ -13,11 +13,21 @@
     <DisplayCard class="max-w-2xl mx-auto text-gray-800">
       <template #header>
         <h1 class="text-center text-3xl font-bold">
-          Passowrd Generator
+          Simple Passowrd Generator
         </h1>
         <hr class="mt-4 mb-8 border-neutral-500">
       </template>
       <PasswordGenerator class="p-4" />
+      <template #footer>
+        <hr class="mt-8 mb-4 border-neutral-500">
+        <p class="text-center text-lg font-semibold">
+          Copyright © 2025 All Rights Reserved -
+          <a href="https://github.com/Mahmoud217TR" target="__blank"
+            class="hover:text-red-600 transition-colors duration-300">
+            MahmoudTR
+          </a>
+        </p>
+      </template>
     </DisplayCard>
   </main>
 

@@ -2,7 +2,10 @@
   <input v-bind="$attrs"
     :value="modelValue"
     @input="$emit('update:modelValue', $event.target.value)"
-    class="border border-neutral-500 px-2 py-1 rounded-md disabled:bg-neutral-300 disabled:cursor-not-allowed"
+    class="border border-neutral-500 px-2 py-1 rounded-md
+      disabled:bg-neutral-300 disabled:cursor-not-allowed
+        focus:outline-0 focus:border-red-800 focus:shadow-lg
+      focus:shadow-red-400 transition-all duration-300"
   />
 </template>
 
