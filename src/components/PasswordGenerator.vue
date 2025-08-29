@@ -7,7 +7,11 @@
 
 <template>
   <form @submit.prevent="generate">
-    <div class="flex w-full border border-neutral-500 rounded-md overflow-hidden mb-8">
+    <div class="flex flex-col gap-2 mb-6">
+      <label for="password" class="text-start">
+      Password
+    </label>
+    <div class="flex w-full border border-neutral-500 rounded-md overflow-hidden">
       <input id='password' class="px-2 py-1 w-full" type="text" v-model="password" disabled>
       <RegularButton class="px-4 py-2 border-x border-neutral-500" type="submit" title="Regenerate">
         <font-awesome-icon icon="fa-solid fa-arrows-rotate" />
@@ -15,6 +19,7 @@
       <RegularButton class="px-4 py-2" @click.prevent="copyPassword" title="Copy">
         <font-awesome-icon icon="fa-solid fa-copy" />
       </RegularButton>
+    </div>
     </div>
     <div class="flex gap-8 flex-col my-4">
       <div class="grid grid-cols-1 gap-2 justify-center items-center">
@@ -50,7 +55,7 @@
           <label for="min-numbers">
             Minimum Numbers Count
           </label>
-          <InputField type="number" :min="includeNumbers ? '1' : '0'" :max="maxNumbers"
+          <InputField id="min-numbers" type="number" :min="includeNumbers ? '1' : '0'" :max="maxNumbers"
             v-model.lazy="minNumbers" :disabled="!includeNumbers" @change="generate" />
         </div>
         <div class="flex flex-col gap-2">

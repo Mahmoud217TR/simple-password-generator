@@ -5,7 +5,7 @@
 </script>
 
 <template>
-  <header class="h-20">
+  <header class="h-14">
 
   </header>
 
@@ -17,7 +17,7 @@
         </h1>
         <hr class="mt-4 mb-8 border-neutral-500">
       </template>
-      <PasswordGenerator class="p-4" />
+      <PasswordGenerator class="px-4" />
       <template #footer>
         <hr class="mt-8 mb-4 border-neutral-500">
         <p class="text-center text-lg font-semibold">
